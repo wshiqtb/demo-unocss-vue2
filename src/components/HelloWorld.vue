@@ -31,10 +31,31 @@
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data(){
+    return {
+      tag: false
+    }
+  },
+  async created() {
+    const a = 1;
+    switch(a){
+      case 1:
+        this.test();
+        break;
+    }
+  },
+  mounted() {
+  },
+  methods: {
+    test(){
+      console.log(11111111);
+    }
   }
 }
 </script>

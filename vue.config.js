@@ -20,8 +20,6 @@ module.exports = {
         prependData: `@import "~@/styles/variables.scss";`
       },
     },
-    extract: {
-      filename: '[name].[hash:9].css',
-    },
+    extract: true,
   },
 }

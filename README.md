@@ -33,13 +33,13 @@ module.exports = {
         prependData: `@import "~@/styles/variables.scss";`
       },
     },
-    extract: {
-      filename: '[name].[hash:9].css',
-    },
+    extract: true,
   },
 }
 ```
-> css.extract配置和rules中的cache-loader删除配置是为了解决unocss样式不生效的问题，不可缺。
+> `css.extract`配置和rules中的`cache-loader`删除配置是为了解决unocss样式不生效的问题，不可缺。
+
+> 删除`cache-loader`会导致项目开发过程中热更新很慢。 推荐vue-cli + vue2的项目使用`vue add windicss`插件，该插件会自动配置好webpack，使项目支持`windicss`，在vscode中安装`windicss-intellisense`插件，即可享受windicss的开发体验。
 
 ## 3. 配置 unocss
 
